@@ -1,0 +1,55 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  font-size: 16px;
+
+  & tr {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  & th, & td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & thead {
+    border: 1px solid #ccc;
+
+    & > tr {
+
+      background-color: #e6e6e6;
+    }
+
+  }
+
+  & tbody {
+    border: 1px solid #ccc;
+    min-height: 24px;
+    width: 100%;
+
+    & > tr {
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e6e6e6;
+        border-color: #bbb;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+      }
+
+      &:active {
+        background-color: #dcdcdc;
+        border-color: #aaa;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+      }
+
+    }
+
+  }
+
+}
